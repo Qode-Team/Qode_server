@@ -56,4 +56,15 @@ const getSearch = (async(req,res,next)=>{
     }
 })
 
-module.exports = {getBoards, getHashTages, getSearch};
+const sortPopularity = (async(req,res,next)=>{
+    const { limit, offset } = req.query;
+    try{
+        const posts = await Board.findAll({ order : ['bbsReco', 'DESC'], limit, offset});
+        return res.json(posts);
+    }catch(e){
+        console.error(e);
+        return next(e);
+    }
+
+})
+module.exports = {getBoards, getHashTages, getSearch, sortPopularity};
