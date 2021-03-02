@@ -10,9 +10,9 @@ Our project name is Qode and it is Q&A platform
 
 Info
 ------
-Framework : **Node.js Express**
-Database : **MySQL**
-Storages : **RaspberryPi**
+- Framework : **Node.js Express**
+- Database : **MySQL**
+- Storages : **RaspberryPi**
  
 
 Installation
